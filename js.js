@@ -101,7 +101,7 @@ function renderQuestion() {
 
     progressText.textContent = `Multiple Choice ${qIndex + 1} / ${total}`;
     questionTitle.textContent = `[Player ${playerNumber}] ${questionBank.mcQuestions[qIndex]}`;
-    questionType.textContent = "객관식 문제입니다. 보기 중 하나를 선택하세요.";
+    questionType.textContent = "This is multiple choice question. Please choose the answer.";
 
     optionsBox.innerHTML = "";
     blankBox.classList.add("hidden");
@@ -128,7 +128,7 @@ function renderQuestion() {
 
     progressText.textContent = `Fill in the Blank ${qIndex + 1} / ${total}`;
     questionTitle.textContent = `[Player ${playerNumber}] ${questionBank.blankQuestions[qIndex]}`;
-    questionType.textContent = "빈칸 문제입니다. 정답을 직접 입력하세요.";
+    questionType.textContent = "This is blank space question. Enter the answer.";
 
     optionsBox.innerHTML = "";
     blankBox.classList.remove("hidden");
@@ -149,7 +149,7 @@ function submitMcAnswer() {
   const selected = document.querySelector('input[name="mcOption"]:checked');
 
   if (!selected) {
-    setMessage(feedback, "정답 번호를 선택하세요.", "error");
+    setMessage(feedback, "Please select the number.", "error");
     return;
   }
 
@@ -171,7 +171,7 @@ function submitBlankAnswer() {
   const answer = blankInput.value.trim().toLowerCase();
 
   if (!answer) {
-    setMessage(feedback, "정답을 입력하세요.", "error");
+    setMessage(feedback, "Enter the anser.", "error");
     return;
   }
 
