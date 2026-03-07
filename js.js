@@ -17,6 +17,7 @@ const questionBank = {
   ],
   blankAnswers: ["jupiter", "paris"]
 };
+// 문제들 
 
 const state = {
   scores: [0, 0],
