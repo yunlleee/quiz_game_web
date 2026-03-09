@@ -17,7 +17,7 @@ const questionBank = {
   ],
   blankAnswers: ["jupiter", "paris"]
 };
-// 문제들 
+// 문제들 수정
 
 const state = {
   scores: [0, 0],
